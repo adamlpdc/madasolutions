@@ -1,0 +1,11 @@
+# Build / deploy artifacts
+*.zip
+.DS_Store
+Thumbs.db
+
+# Editor / OS
+.vscode/
+.idea/
+
+# Local server output
+node_modules/
