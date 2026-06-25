@@ -2,7 +2,7 @@
   "cleanUrls": true,
   "redirects": [
     {
-      "source": "/demo/:slug",
+      "source": "/demo/legacy/:slug",
       "destination": "/?ref=:slug",
       "statusCode": 301
     }
