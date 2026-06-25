@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{firm_name} — {service} in {city} | Book online</title>
+<meta name="description" content="{firm_name} provides {service} in {city}. Friendly local service — book online or call {phone}." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#3868e8; --blue-2:#2c58d6; --pink:#e81878;
+  --ink:#11131a; --muted:#5a5a66; --bg:#f8f8f8; --card:#ffffff; --line:#e6e6ec;
+  --radius:18px; --radius-lg:24px;
+  --shadow:0 18px 60px rgba(20,20,40,.08);
+  --grad:linear-gradient(135deg,#3868e8 0%,#e81878 100%);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+.demo-banner{background:var(--pink);color:#fff;text-align:center;padding:8px;font-size:12px;font-weight:600;letter-spacing:.05em}
+
+.topbar{background:var(--ink);color:#fff;padding:10px 0;font-size:13px;font-weight:500}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.topbar a{color:#fff;text-decoration:none;font-weight:700}
+
+header{background:#fff;border-bottom:1px solid var(--line);padding:18px 0;position:sticky;top:0;z-index:30;backdrop-filter:blur(10px);background:rgba(255,255,255,.92)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px}
+.logo{font-family:'Sora',sans-serif;font-weight:800;font-size:22px;letter-spacing:-.01em;color:var(--ink)}
+.logo .accent{color:var(--pink)}
+.cta-call{display:inline-block;background:var(--grad);color:#fff;padding:12px 22px;border-radius:12px;font-weight:700;text-decoration:none;font-size:15px}
+
+.hero{background:linear-gradient(180deg,#fff 0%,#fff5f9 100%);padding:72px 0 56px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-200px;right:-150px;width:500px;height:500px;background:radial-gradient(circle,rgba(232,24,120,.15),transparent 70%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative;z-index:1}
+.hero h1{font-family:'Sora',sans-serif;font-weight:800;font-size:50px;line-height:1.05;margin:0 0 18px;letter-spacing:-.02em}
+.hero h1 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lede{font-size:18px;color:var(--muted);margin:0 0 32px;max-width:560px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px}
+.btn-primary{background:var(--ink);color:#fff;padding:16px 26px;border-radius:14px;font-weight:700;text-decoration:none;font-size:16px;display:inline-block}
+.btn-secondary{background:#fff;color:var(--ink);padding:16px 26px;border-radius:14px;font-weight:700;text-decoration:none;font-size:16px;border:1px solid var(--line);display:inline-block}
+.hero-stats{display:flex;gap:32px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+.hero-stats strong{display:block;color:var(--ink);font-family:'Sora',sans-serif;font-size:24px;font-weight:800}
+
+.hero-image{background:linear-gradient(135deg,rgba(232,24,120,.1),rgba(56,104,232,.1));border-radius:var(--radius-lg);padding:48px;display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-weight:800;font-size:24px;color:var(--muted);text-align:center;border:1px dashed var(--line);min-height:280px}
+.hero-image .big{font-size:64px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:8px}
+
+.section{padding:80px 0}
+.section h2{font-family:'Sora',sans-serif;font-weight:800;font-size:42px;letter-spacing:-.02em;margin:0 0 12px;line-height:1.1}
+.section .sub{color:var(--muted);font-size:18px;margin:0 0 48px;max-width:680px}
+
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.service-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:transform .2s ease,box-shadow .2s ease}
+.service-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.service-icon{width:48px;height:48px;background:var(--grad);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-family:'Sora',sans-serif;font-size:18px;margin-bottom:16px}
+.service-card h3{font-family:'Sora',sans-serif;font-weight:700;font-size:19px;margin:0 0 8px}
+.service-card p{color:var(--muted);margin:0;font-size:14px}
+
+.why{background:var(--ink);color:#fff;padding:80px 0}
+.why h2{color:#fff}
+.why .sub{color:rgba(255,255,255,.7)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;margin-top:40px}
+.why-item{padding:24px 0;border-top:2px solid rgba(255,255,255,.15)}
+.why-item .num{font-family:'Sora',sans-serif;font-weight:800;font-size:36px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:8px}
+.why-item h4{font-family:'Sora',sans-serif;font-weight:700;font-size:18px;margin:0 0 6px;color:#fff}
+.why-item p{color:rgba(255,255,255,.7);margin:0;font-size:14px}
+
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:40px}
+.review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.review .stars{color:var(--pink);font-size:16px;letter-spacing:2px;margin-bottom:10px}
+.review p{font-size:15px;color:var(--ink);margin:0 0 14px;font-style:italic}
+.review .author{font-weight:700;font-size:14px}
+.review .where{color:var(--muted);font-size:13px}
+
+.cta-strip{background:var(--grad);color:#fff;padding:64px 0;text-align:center}
+.cta-strip h2{font-family:'Sora',sans-serif;font-weight:800;font-size:38px;margin:0 0 12px;letter-spacing:-.02em}
+.cta-strip p{font-size:18px;margin:0 0 28px;opacity:.95}
+.cta-strip .cta-call{background:#fff;color:var(--ink);font-size:17px;padding:18px 32px}
+
+footer{background:var(--ink);color:rgba(255,255,255,.7);padding:48px 0 24px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
+footer .firm{color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:18px;margin-bottom:8px}
+footer a{color:#fff;text-decoration:none}
+
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+@media (max-width:700px){
+  .hero h1{font-size:36px}
+  .section h2{font-size:32px}
+  .cta-strip h2{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-banner">FREE DEMO · Built for {firm_name} by MADA Solutions</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>✓ Book online · {service} in {city}</span>
+    <a href="tel:{phone}">📞 {phone}</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="logo">{firm_name}<span class="accent">.</span></div>
+    <a href="#book" class="cta-call">Book now</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>{service} in <span class="hl">{city}</span> — friendly, local, easy.</h1>
+      <p class="lede">{firm_name} offers {service} to people across {city} and surrounding areas. Easy online booking, transparent pricing, and people who actually want you to have a good experience.</p>
+      <div class="hero-ctas">
+        <a href="#book" class="btn-primary">Book online</a>
+        <a href="tel:{phone}" class="btn-secondary">Call {phone}</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>—</strong><span>reviews go live with site</span></div>
+        <div><strong>EASY</strong><span>online booking</span></div>
+        <div><strong>FAIR</strong><span>transparent pricing</span></div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div>
+        <div class="big">→</div>
+        <div>Your photos here</div>
+        <div style="font-size:14px;font-weight:500;margin-top:8px">(We'll use your real photos)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>What we offer.</h2>
+    <p class="sub">{service} and related services for {city}. Walk-ins, bookings, and packages available.</p>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">1</div><h3>Most popular</h3><p>The service most people book. Description goes here — replace with the actual offering and price.</p></div>
+      <div class="service-card"><div class="service-icon">2</div><h3>Premium option</h3><p>Higher-end version. Description goes here — used when customers want more time, attention, or extras.</p></div>
+      <div class="service-card"><div class="service-icon">3</div><h3>Quick version</h3><p>Fast option for people on the go. Description goes here — for people who want the essentials done well.</p></div>
+      <div class="service-card"><div class="service-icon">4</div><h3>Packages</h3><p>Multiple-session packages at a discount. Description goes here — for repeat customers or gift purchases.</p></div>
+      <div class="service-card"><div class="service-icon">5</div><h3>Gift vouchers</h3><p>Available year-round. Description goes here — popular for birthdays, anniversaries, thank-yous.</p></div>
+      <div class="service-card"><div class="service-icon">6</div><h3>Something else</h3><p>Add your own service here. Whatever you offer that doesn't fit the boxes above.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <h2>Why people come back.</h2>
+    <p class="sub">Four things we hear again and again from {firm_name}'s regulars.</p>
+    <div class="why-grid">
+      <div class="why-item"><div class="num">01</div><h4>Easy to book</h4><p>Online 24/7, or call during the day. Same-week slots most weeks. No long waits.</p></div>
+      <div class="why-item"><div class="num">02</div><h4>Fair pricing</h4><p>Prices on the website, no upsells at the till. You know what you're paying before you book.</p></div>
+      <div class="why-item"><div class="num">03</div><h4>Friendly team</h4><p>Real people who remember your name, your preferences, and what you talked about last time.</p></div>
+      <div class="why-item"><div class="num">04</div><h4>Local & independent</h4><p>Independent local business. Money stays in {city}. You know who you're supporting.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>What customers say.</h2>
+    <p class="sub">Your real Google reviews appear here once we connect them. We never fabricate testimonials — your actual customer reviews land here automatically.</p>
+    <div class="reviews-grid">
+      <div class="review" style="background:#f8f8f8;border-style:dashed">
+        <div class="stars" style="color:var(--muted)">— — — — —</div>
+        <p style="color:var(--muted);font-style:normal">"Your customer's review will appear here. We'll import them directly from Google once the site is live."</p>
+        <div class="author" style="color:var(--muted)">Sample layout</div>
+        <div class="where">Real review goes here</div>
+      </div>
+      <div class="review" style="background:#f8f8f8;border-style:dashed">
+        <div class="stars" style="color:var(--muted)">— — — — —</div>
+        <p style="color:var(--muted);font-style:normal">"Sample review layout. New reviews show up automatically — you never have to touch the site."</p>
+        <div class="author" style="color:var(--muted)">Sample layout</div>
+        <div class="where">Real review goes here</div>
+      </div>
+      <div class="review" style="background:#f8f8f8;border-style:dashed">
+        <div class="stars" style="color:var(--muted)">— — — — —</div>
+        <p style="color:var(--muted);font-style:normal">"Sample review layout. We can also pull from Trustpilot, Yelp, or your own feedback forms."</p>
+        <div class="author" style="color:var(--muted)">Sample layout</div>
+        <div class="where">Real review goes here</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip" id="book">
+  <div class="wrap">
+    <h2>Book your visit.</h2>
+    <p>Online in under a minute. Or call — we'll pick up.</p>
+    <a href="tel:{phone}" class="cta-call">📞 Call {phone}</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="firm">{firm_name}</div>
+      <div>{service} in {city}</div>
+      <div style="margin-top:8px"><a href="tel:{phone}">{phone}</a></div>
+    </div>
+    <div style="text-align:right">
+      <div>This is a free demo site built by</div>
+      <div><a href="https://madasolutions.co.uk/?ref={slug}" style="color:#fff;text-decoration:underline">MADA Solutions</a></div>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;opacity:.7">
+    Free demo created by MADA Solutions · madasolutions.co.uk
+  </div>
+</footer>
+
+</body>
+</html>

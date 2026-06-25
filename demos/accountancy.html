@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{firm_name} — Accountants in {city} | {specialism}</title>
+<meta name="description" content="{firm_name} provides {specialism} in {city}. {credentials_short} Free initial consultation. Call {phone}." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#3868e8; --blue-2:#2c58d6; --pink:#e81878;
+  --ink:#11131a; --muted:#5a5a66; --bg:#f8f8f8; --card:#ffffff; --line:#e6e6ec;
+  --radius:18px; --radius-lg:24px;
+  --shadow:0 18px 60px rgba(20,20,40,.08);
+  --grad:linear-gradient(135deg,#3868e8 0%,#e81878 100%);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+.demo-banner{background:var(--pink);color:#fff;text-align:center;padding:8px;font-size:12px;font-weight:600;letter-spacing:.05em}
+
+.topbar{background:var(--ink);color:#fff;padding:10px 0;font-size:13px;font-weight:500}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.topbar a{color:#fff;text-decoration:none;font-weight:700}
+
+header{background:#fff;border-bottom:1px solid var(--line);padding:18px 0;position:sticky;top:0;z-index:30;backdrop-filter:blur(10px);background:rgba(255,255,255,.92)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px}
+.logo{font-family:'Sora',sans-serif;font-weight:800;font-size:22px;letter-spacing:-.01em;color:var(--ink)}
+.logo .accent{color:var(--pink)}
+.cta-call{display:inline-block;background:var(--grad);color:#fff;padding:12px 22px;border-radius:12px;font-weight:700;text-decoration:none;font-size:15px}
+
+.hero{background:linear-gradient(180deg,#fff 0%,#f4f5fa 100%);padding:72px 0 56px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-200px;right:-200px;width:500px;height:500px;background:radial-gradient(circle,rgba(56,104,232,.15),transparent 70%);pointer-events:none}
+.hero h1{font-family:'Sora',sans-serif;font-weight:800;font-size:50px;line-height:1.05;margin:0 0 18px;letter-spacing:-.02em;max-width:820px}
+.hero h1 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lede{font-size:18px;color:var(--muted);margin:0 0 32px;max-width:620px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+.btn-primary{background:var(--ink);color:#fff;padding:16px 26px;border-radius:14px;font-weight:700;text-decoration:none;font-size:16px;display:inline-block}
+.btn-secondary{background:#fff;color:var(--ink);padding:16px 26px;border-radius:14px;font-weight:700;text-decoration:none;font-size:16px;border:1px solid var(--line);display:inline-block}
+.hero-trust{display:flex;gap:32px;flex-wrap:wrap;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:24px;max-width:820px}
+.hero-trust strong{display:block;color:var(--ink);font-family:'Sora',sans-serif;font-size:22px;font-weight:800;margin-bottom:2px}
+
+.section{padding:80px 0}
+.section h2{font-family:'Sora',sans-serif;font-weight:800;font-size:42px;letter-spacing:-.02em;margin:0 0 12px;line-height:1.1}
+.section .sub{color:var(--muted);font-size:18px;margin:0 0 48px;max-width:680px}
+
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.service-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:transform .2s ease,box-shadow .2s ease}
+.service-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.service-icon{width:48px;height:48px;background:var(--grad);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-family:'Sora',sans-serif;font-size:18px;margin-bottom:16px}
+.service-card h3{font-family:'Sora',sans-serif;font-weight:700;font-size:19px;margin:0 0 8px}
+.service-card p{color:var(--muted);margin:0;font-size:14px}
+
+.who{background:#fff;padding:80px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.who-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:32px}
+.who-card{padding:24px;border-radius:var(--radius);background:var(--bg);border:1px solid var(--line)}
+.who-card h3{font-family:'Sora',sans-serif;font-weight:700;font-size:18px;margin:0 0 6px;color:var(--blue)}
+.who-card p{margin:0;font-size:14px;color:var(--muted)}
+
+.why{background:var(--ink);color:#fff;padding:80px 0}
+.why h2{color:#fff}
+.why .sub{color:rgba(255,255,255,.7)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;margin-top:40px}
+.why-item{padding:24px 0;border-top:2px solid rgba(255,255,255,.15)}
+.why-item .num{font-family:'Sora',sans-serif;font-weight:800;font-size:36px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:8px}
+.why-item h4{font-family:'Sora',sans-serif;font-weight:700;font-size:18px;margin:0 0 6px;color:#fff}
+.why-item p{color:rgba(255,255,255,.7);margin:0;font-size:14px}
+
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:40px}
+.review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.review .stars{color:var(--pink);font-size:16px;letter-spacing:2px;margin-bottom:10px}
+.review p{font-size:15px;color:var(--ink);margin:0 0 14px;font-style:italic}
+.review .author{font-weight:700;font-size:14px}
+.review .where{color:var(--muted);font-size:13px}
+
+.cta-strip{background:var(--grad);color:#fff;padding:64px 0;text-align:center}
+.cta-strip h2{font-family:'Sora',sans-serif;font-weight:800;font-size:38px;margin:0 0 12px;letter-spacing:-.02em}
+.cta-strip p{font-size:18px;margin:0 0 28px;opacity:.95}
+.cta-strip .cta-call{background:#fff;color:var(--ink);font-size:17px;padding:18px 32px}
+
+footer{background:var(--ink);color:rgba(255,255,255,.7);padding:48px 0 24px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
+footer .firm{color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:18px;margin-bottom:8px}
+footer a{color:#fff;text-decoration:none}
+
+@media (max-width:700px){
+  .hero h1{font-size:36px}
+  .section h2{font-size:32px}
+  .cta-strip h2{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-banner">FREE DEMO · Built for {firm_name} by MADA Solutions</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>✓ Free initial consultation · No obligation</span>
+    <a href="tel:{phone}">📞 {phone}</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="logo">{firm_name}<span class="accent">.</span></div>
+    <a href="#book" class="cta-call">Book free consultation</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>{specialism} for <span class="hl">{audience}</span> in {city}.</h1>
+    <p class="lede">{firm_name} provides {specialism} to {audience} across {city} and beyond. {credentials_short} Fixed fees agreed upfront. Free initial consultation so you know if we're the right fit before committing.</p>
+    <div class="hero-ctas">
+      <a href="#book" class="btn-primary">Book free consultation</a>
+      <a href="tel:{phone}" class="btn-secondary">Call {phone}</a>
+    </div>
+    <div class="hero-trust">
+      <div><strong>FREE</strong><span>initial consultation</span></div>
+      <div><strong>FIXED</strong><span>fees agreed upfront</span></div>
+      <div><strong>QUALIFIED</strong><span>{credentials_short}</span></div>
+      <div><strong>—</strong><span>reviews go live with site</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>What we do.</h2>
+    <p class="sub">Core services for {audience} across {city}. Fixed fees, no surprises, plain English.</p>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">1</div><h3>Annual accounts</h3><p>Year-end accounts prepared and filed. Corporation tax, sole trader accounts, partnership accounts.</p></div>
+      <div class="service-card"><div class="service-icon">2</div><h3>Self-assessment</h3><p>Personal tax returns. Rental income, capital gains, foreign income, employment. Done on time, every time.</p></div>
+      <div class="service-card"><div class="service-icon">3</div><h3>Bookkeeping & VAT</h3><p>Monthly bookkeeping, VAT returns (MTD-compliant), CIS returns for construction. Xero, QuickBooks, Sage — we work with whatever you use.</p></div>
+      <div class="service-card"><div class="service-icon">4</div><h3>Payroll & auto-enrolment</h3><p>Weekly or monthly payroll, pension auto-enrolment, RTI submissions. Real Time Information compliant.</p></div>
+      <div class="service-card"><div class="service-icon">5</div><h3>Tax planning</h3><p>Year-round planning to keep your tax bill down. R&D claims, EIS/SEIS, salary vs dividend, pension contributions.</p></div>
+      <div class="service-card"><div class="service-icon">6</div><h3>Company formation</h3><p>Set up your limited company, register with HMRC, register for VAT and PAYE. We handle Companies House filings going forward.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="who">
+  <div class="wrap">
+    <h2>Who we work with.</h2>
+    <p class="sub">If your situation looks like one of these, we can probably help.</p>
+    <div class="who-grid">
+      <div class="who-card"><h3>Sole traders</h3><p>Self-employed individuals needing accounts, tax returns, and someone who actually picks up the phone.</p></div>
+      <div class="who-card"><h3>Limited companies</h3><p>From day-one startups to established owner-managed businesses. Year-end accounts, corporation tax, director responsibilities.</p></div>
+      <div class="who-card"><h3>Landlords</h3><p>Residential or commercial. Rental income, mortgage interest relief, Section 24, capital gains on disposal.</p></div>
+      <div class="who-card"><h3>Construction & CIS</h3><p>Subcontractors and main contractors. CIS deductions, monthly returns, contractor verification.</p></div>
+      <div class="who-card"><h3>E-commerce & digital</h3><p>Online sellers, dropshippers, agencies. Multi-platform bookkeeping, stock accounting, international VAT.</p></div>
+      <div class="who-card"><h3>Growing businesses</h3><p>Pre-revenue to £5m+ turnover. We scale with you — no need to switch firms every time you hire your 10th person.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <h2>How we work.</h2>
+    <p class="sub">What working with {firm_name} actually feels like.</p>
+    <div class="why-grid">
+      <div class="why-item"><div class="num">01</div><h4>Fixed fees</h4><p>Quote upfront. No "we'll bill you for the hours" surprises. If the work changes, we agree the new fee before doing it.</p></div>
+      <div class="why-item"><div class="num">02</div><h4>Plain English</h4><p>No accountant-speak. We explain what we did, why we did it, and what it means for your tax bill.</p></div>
+      <div class="why-item"><div class="num">03</div><h4>Cloud-based</h4><p>Xero, QuickBooks, Sage, FreeAgent — whatever you already use. Or we'll migrate you to one for free.</p></div>
+      <div class="why-item"><div class="num">04</div><h4>Year-round support</h4><p>Phone and email year-round, not just at year-end. Quick questions answered same day.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>What clients say.</h2>
+    <p class="sub">Your real Google reviews appear here once we connect them. We never fabricate testimonials — your actual client reviews land here automatically.</p>
+    <div class="reviews-grid">
+      <div class="review" style="background:#f8f8f8;border-style:dashed">
+        <div class="stars" style="color:var(--muted)">— — — — —</div>
+        <p style="color:var(--muted);font-style:normal">"Your client's review will appear here. We'll import them directly from Google once the site is live."</p>
+        <div class="author" style="color:var(--muted)">Sample layout</div>
+        <div class="where">Real review goes here</div>
+      </div>
+      <div class="review" style="background:#f8f8f8;border-style:dashed">
+        <div class="stars" style="color:var(--muted)">— — — — —</div>
+        <p style="color:var(--muted);font-style:normal">"Sample review layout. New reviews show up automatically — you never have to touch the site."</p>
+        <div class="author" style="color:var(--muted)">Sample layout</div>
+        <div class="where">Real review goes here</div>
+      </div>
+      <div class="review" style="background:#f8f8f8;border-style:dashed">
+        <div class="stars" style="color:var(--muted)">— — — — —</div>
+        <p style="color:var(--muted);font-style:normal">"Sample review layout. We can also pull from your ICAEW/ACCA listing if you'd prefer."</p>
+        <div class="author" style="color:var(--muted)">Sample layout</div>
+        <div class="where">Real review goes here</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip" id="book">
+  <div class="wrap">
+    <h2>Free initial consultation.</h2>
+    <p>30 minutes, no obligation. We'll tell you straight if we can help — and what it'd cost.</p>
+    <a href="tel:{phone}" class="cta-call">📞 Call {phone}</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="firm">{firm_name}</div>
+      <div>{specialism} in {city}</div>
+      <div style="margin-top:8px"><a href="tel:{phone}">{phone}</a></div>
+    </div>
+    <div style="text-align:right">
+      <div>This is a free demo site built by</div>
+      <div><a href="https://madasolutions.co.uk/?ref={slug}" style="color:#fff;text-decoration:underline">MADA Solutions</a></div>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;opacity:.7">
+    Free demo created by MADA Solutions · madasolutions.co.uk
+  </div>
+</footer>
+
+</body>
+</html>
