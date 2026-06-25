@@ -1,0 +1,10 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/demo/:slug",
+      "destination": "/?ref=:slug",
+      "statusCode": 301
+    }
+  ]
+}
