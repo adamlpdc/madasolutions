@@ -44,11 +44,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${sora.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-brand-bg text-brand-ink">
+    <html lang="en" className="h-full antialiased">
+      <body
+        className={`${inter.variable} ${sora.variable} min-h-full flex flex-col bg-brand-bg text-brand-ink`}
+      >
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
