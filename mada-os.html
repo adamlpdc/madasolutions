@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MADA OS — Internal Dashboard</title>
+  <meta name="description" content="MADA OS — the operating system for everything MADA Solutions is building." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="logo-light.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="os-page">
+  <div class="os-shell">
+    <aside class="os-sidebar">
+      <a class="os-brand" href="index.html">
+        <img src="logo.png" alt="MADA Solutions" />
+      </a>
+      <nav class="os-nav">
+        <a href="#overview" class="is-active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+          Overview
+        </a>
+        <a href="#products">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/></svg>
+          Products
+        </a>
+        <a href="#ideas">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3 11.2V16h6v-1.8A6 6 0 0 0 12 3z"/></svg>
+          Ideas
+        </a>
+        <a href="#goal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>
+          £10k Goal
+        </a>
+        <a href="#activity">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+          Activity
+        </a>
+      </nav>
+      <div class="os-sidebar-foot">
+        <span class="os-pill os-pill-blue">Mock data</span>
+        <p>Internal preview · not indexed</p>
+      </div>
+    </aside>
+
+    <main class="os-main">
+      <header class="os-topbar">
+        <div>
+          <p class="os-eyebrow">MADA Solutions · Internal</p>
+          <h1>MADA OS</h1>
+          <p class="os-lead">The operating system for everything MADA Solutions is building.</p>
+        </div>
+        <div class="os-topbar-actions">
+          <span class="os-pill os-pill-green"><span class="os-dot"></span> All systems normal</span>
+          <a class="btn primary" href="mailto:support@madasolutions.co.uk">New job</a>
+        </div>
+      </header>
+
+      <section id="overview" class="os-section">
+        <div class="os-kpi-grid">
+          <article class="os-kpi">
+            <div class="os-kpi-top">
+              <span class="os-kpi-label">Active Products</span>
+              <span class="os-kpi-icon" style="--ic:#3868e8">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/></svg>
+              </span>
+            </div>
+            <strong class="os-kpi-value">5</strong>
+            <span class="os-kpi-trend os-up">+1 this quarter</span>
+            <svg class="os-spark" viewBox="0 0 100 30" preserveAspectRatio="none">
+              <polyline points="0,24 15,22 30,20 45,21 60,14 75,12 100,6" fill="none" stroke="#3868e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </article>
+
+          <article class="os-kpi">
+            <div class="os-kpi-top">
+              <span class="os-kpi-label">Revenue Goal</span>
+              <span class="os-kpi-icon" style="--ic:#e81878">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </span>
+            </div>
+            <strong class="os-kpi-value">£6,420</strong>
+            <span class="os-kpi-trend os-up">64% of £10,000</span>
+            <div class="os-bar"><span style="width:64%"></span></div>
+          </article>
+
+          <article class="os-kpi">
+            <div class="os-kpi-top">
+              <span class="os-kpi-label">AI Monthly Costs</span>
+              <span class="os-kpi-icon" style="--ic:#a855f7">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.2 6.8H21l-5.6 4.2 2.1 6.9L12 15.9 6.5 19.9l2.1-6.9L3 8.8h6.8z"/></svg>
+              </span>
+            </div>
+            <strong class="os-kpi-value">£184</strong>
+            <span class="os-kpi-trend os-down">−12% vs last month</span>
+            <svg class="os-spark" viewBox="0 0 100 30" preserveAspectRatio="none">
+              <polyline points="0,8 15,12 30,10 45,18 60,16 75,22 100,20" fill="none" stroke="#a855f7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </article>
+
+          <article class="os-kpi">
+            <div class="os-kpi-top">
+              <span class="os-kpi-label">Next Actions</span>
+              <span class="os-kpi-icon" style="--ic:#22b07d">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              </span>
+            </div>
+            <strong class="os-kpi-value">3</strong>
+            <span class="os-kpi-trend">due this week</span>
+            <ul class="os-mini-list">
+              <li><span class="os-status-pill os-status-amber">Due</span> Ship CultureDAQ v0.3 survey flow</li>
+              <li><span class="os-status-pill os-status-blue">Plan</span> Amazon Doctor pricing page</li>
+              <li><span class="os-status-pill os-status-pink">Idea</span> Party Wrecker launch teaser</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="os-section os-split">
+        <div class="os-card os-ring-card" id="goal">
+          <div class="os-card-head">
+            <h2>Project £10k Progress</h2>
+            <span class="os-status-pill os-status-blue">On track</span>
+          </div>
+          <div class="os-ring-wrap">
+            <svg class="os-ring" viewBox="0 0 140 140">
+              <circle cx="70" cy="70" r="58" class="os-ring-track"/>
+              <circle cx="70" cy="70" r="58" class="os-ring-prog" stroke-dasharray="364" stroke-dashoffset="131"/>
+            </svg>
+            <div class="os-ring-center">
+              <strong>64%</strong>
+              <span>£6,420 / £10,000</span>
+            </div>
+          </div>
+          <p class="os-card-foot">Target date: 30 Sep 2026 · £3,580 remaining</p>
+        </div>
+
+        <div class="os-card">
+          <div class="os-card-head">
+            <h2>Revenue Trend</h2>
+            <span class="os-status-pill os-status-green">+18% MoM</span>
+          </div>
+          <svg class="os-chart" viewBox="0 0 320 140" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="osChartFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#3868e8" stop-opacity="0.22"/>
+                <stop offset="100%" stop-color="#3868e8" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <polyline points="0,120 0,120 40,108 80,112 120,92 160,84 200,66 240,58 280,38 320,24 320,120" fill="url(#osChartFill)" stroke="none"/>
+            <polyline points="0,120 40,108 80,112 120,92 160,84 200,66 240,58 280,38 320,24" fill="none" stroke="#3868e8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="0,128 40,124 80,118 120,116 160,110 200,104 240,98 280,90 320,82" fill="none" stroke="#e81878" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+          </svg>
+          <div class="os-chart-legend">
+            <span><i style="background:#3868e8"></i> Revenue</span>
+            <span><i style="background:#e81878"></i> AI cost run-rate</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="os-section">
+        <div class="os-section-head">
+          <h2>Products Overview</h2>
+          <p>Everything currently live, building or shipping under MADA Solutions.</p>
+        </div>
+        <div class="os-product-grid">
+          <article class="os-product">
+            <div class="os-product-top">
+              <span class="os-product-icon" style="--ic:#3868e8">CD</span>
+              <span class="os-status-pill os-status-green">Live</span>
+            </div>
+            <h3>CultureDAQ</h3>
+            <p>Culture &amp; engagement survey platform for teams.</p>
+            <div class="os-product-meta">
+              <span>MRR <strong>£1,240</strong></span>
+              <span>Users <strong>312</strong></span>
+            </div>
+          </article>
+
+          <article class="os-product">
+            <div class="os-product-top">
+              <span class="os-product-icon" style="--ic:#e81878">AD</span>
+              <span class="os-status-pill os-status-green">Live</span>
+            </div>
+            <h3>Amazon Doctor</h3>
+            <p>Diagnostics &amp; fixes for underperforming Amazon listings.</p>
+            <div class="os-product-meta">
+              <span>MRR <strong>£2,980</strong></span>
+              <span>Clients <strong>14</strong></span>
+            </div>
+          </article>
+
+          <article class="os-product">
+            <div class="os-product-top">
+              <span class="os-product-icon" style="--ic:#a855f7">PW</span>
+              <span class="os-status-pill os-status-amber">Beta</span>
+            </div>
+            <h3>Party Wrecker</h3>
+            <p>Party game app with chaotic mini-challenges.</p>
+            <div class="os-product-meta">
+              <span>MRR <strong>£0</strong></span>
+              <span>Testers <strong>48</strong></span>
+            </div>
+          </article>
+
+          <article class="os-product">
+            <div class="os-product-top">
+              <span class="os-product-icon" style="--ic:#22b07d">HC</span>
+              <span class="os-status-pill os-status-blue">Building</span>
+            </div>
+            <h3>Health Companion</h3>
+            <p>Personal health tracking with AI-assisted check-ins.</p>
+            <div class="os-product-meta">
+              <span>MRR <strong>£0</strong></span>
+              <span>Stage <strong>MVP</strong></span>
+            </div>
+          </article>
+
+          <article class="os-product">
+            <div class="os-product-top">
+              <span class="os-product-icon" style="--ic:#f59e0b">OS</span>
+              <span class="os-status-pill os-status-pink">Internal</span>
+            </div>
+            <h3>MADA OS</h3>
+            <p>This dashboard — the control centre for every product and goal.</p>
+            <div class="os-product-meta">
+              <span>MRR <strong>—</strong></span>
+              <span>Stage <strong>v0.1</strong></span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="ideas" class="os-section os-split">
+        <div class="os-card">
+          <div class="os-card-head">
+            <h2>Ideas Pipeline</h2>
+            <span class="os-status-pill os-status-blue">7 ideas</span>
+          </div>
+          <ul class="os-pipeline">
+            <li><span class="os-status-pill os-status-pink">New</span> Amazon Doctor — automated weekly health report</li>
+            <li><span class="os-status-pill os-status-pink">New</span> CultureDAQ — Slack integration for pulse surveys</li>
+            <li><span class="os-status-pill os-status-amber">Scoping</span> Health Companion — wearable data import</li>
+            <li><span class="os-status-pill os-status-amber">Scoping</span> Party Wrecker — party pack monetisation</li>
+            <li><span class="os-status-pill os-status-blue">Validated</span> MADA OS — client-facing reporting mode</li>
+            <li><span class="os-status-pill os-status-green">Prioritised</span> Amazon Doctor — bulk listing audit tool</li>
+            <li><span class="os-status-pill os-status-green">Prioritised</span> CultureDAQ — benchmark comparisons</li>
+          </ul>
+        </div>
+
+        <div class="os-card" id="activity">
+          <div class="os-card-head">
+            <h2>Recent Activity</h2>
+            <span class="os-status-pill os-status-green">Live feed</span>
+          </div>
+          <ul class="os-activity">
+            <li>
+              <span class="os-activity-dot" style="--ic:#3868e8"></span>
+              <div><strong>CultureDAQ</strong> shipped survey export to CSV<span>2 hours ago</span></div>
+            </li>
+            <li>
+              <span class="os-activity-dot" style="--ic:#e81878"></span>
+              <div><strong>Amazon Doctor</strong> closed audit for 2 new clients<span>Yesterday</span></div>
+            </li>
+            <li>
+              <span class="os-activity-dot" style="--ic:#a855f7"></span>
+              <div><strong>Party Wrecker</strong> beta round 2 invites sent<span>2 days ago</span></div>
+            </li>
+            <li>
+              <span class="os-activity-dot" style="--ic:#22b07d"></span>
+              <div><strong>Health Companion</strong> MVP check-in flow drafted<span>3 days ago</span></div>
+            </li>
+            <li>
+              <span class="os-activity-dot" style="--ic:#f59e0b"></span>
+              <div><strong>MADA OS</strong> dashboard v0.1 created<span>Today</span></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <p class="os-footnote">All figures on this page are mock data for design preview purposes.</p>
+    </main>
+  </div>
+</body>
+</html>
